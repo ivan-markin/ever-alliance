@@ -1,0 +1,50 @@
+.socials-block {
+    display: flex;
+    
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: rgba(26, 37, 58, 0.8);
+        border-radius: 8px;
+        transition: all .2s;
+
+        &:not(:last-of-type) {
+            margin-right: 16px;
+        }
+
+        &_youtube:hover {
+            background: #EA0000;
+        }
+
+        &_facebook:hover {
+            background: #5179C9;
+        }
+
+        &_medium:hover {
+            background: #40464A;
+        }
+
+        &_discord:hover {
+            background: #5662F6;
+        }
+
+        &_telegram:hover {
+            background: #29A9EA;
+        }
+
+        &_github:hover {
+            background: #40464A;
+        }
+
+        &_twitter:hover {
+            background: #1DA1F2;
+        }
+
+        &_reddit:hover {
+            background: #FF5507;
+        }
+    }
+}

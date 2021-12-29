@@ -1,0 +1,73 @@
+@import './normalize.scss';
+@import './fonts.scss';
+@import './variables';
+@import './swiper/swiper.scss';
+@import './swiper/pagination.scss';
+
+// Blocks
+@import './blocks/header.scss';
+@import './blocks/btn.scss';
+@import './blocks/hero-block.scss';
+@import './blocks/title.scss';
+@import './blocks/section-caption.scss';
+@import './blocks/everscale-network.scss';
+@import './blocks/socials-block.scss';
+@import './blocks/section-divider.scss';
+@import './blocks/help-with.scss';
+@import './blocks/alliance-members.scss';
+@import './blocks/double-blocks.scss';
+@import './blocks/news.scss';
+@import './blocks/footer.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+// html {
+//   overflow: hidden;
+//   position: fixed;
+//   left: 0;
+//   right: 0;
+//   top: 0;
+//   bottom: 0;
+// }
+
+body {
+  font-family: 'TT Firs', 'Roboto', sans-serif;
+  color: var(--color-black);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  
+  width: 100%;
+
+  &.fixed {
+    position: fixed;
+  }
+}
+
+.container {
+  min-width: 320px;
+  overflow-x: hidden;
+  padding: 0 0 50px;
+
+  @media (max-width: 768px) {
+    padding: 0 0 50px;
+  }
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1548px;
+  padding: 0 78px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1366px) {
+    padding: 0 40px;
+  }
+
+  @media screen and (max-width: 420px) {
+    padding: 0 12px;
+  }
+}
+
+

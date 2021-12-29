@@ -1,0 +1,78 @@
+.footer {
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 400;
+        margin: 0 0 20px;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+
+        &-description {
+            font-size: 16px;
+            margin: 0 0 12px;
+        }
+    }
+
+    &__socials-block {
+        margin-bottom: 24px;
+        
+        .socials-block__item {
+            width: 24px;
+            height: 24px;            
+
+            &:not(:last-of-type) {
+                margin-right: 8px;
+            }
+
+            img {
+                transform: scale(.7);
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+
+        &-item {
+            &:not(:last-of-type) {
+                margin-right: 35px;
+            }
+            
+            ul {
+                padding: 0;
+                margin: 0;
+
+                li {
+                    list-style: none;
+
+                    &:not(:last-of-type) {
+                        margin-bottom: 16px;
+                    }
+
+                    a {
+                        color: rgba(26, 37, 58, 0.6);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__buy {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        img:first-of-type {
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.double-blocks {
+    margin-bottom: 180px;
+
+    &__container {
+        display: flex;
+    }
+
+    &__item {
+        border-radius: 8px;
+        border: 1px #E6E6E6 solid;
+        background-repeat: no-repeat;        
+        background-position: right top; 
+        padding: 60px;
+
+        &_1 {
+            background-image: image-set(
+                url('../../images/double-blocks/double-blocks_1.png') 1x,
+                url('../../images/double-blocks/double-blocks_1@2x.png') 2x
+            );                     
+            background-size: cover;              
+        }
+
+        &_2 {
+            background-image: image-set(
+                url('../../images/double-blocks/double-blocks_2.png') 1x,
+                url('../../images/double-blocks/double-blocks_2@2x.png') 2x
+            );                       
+            background-size: contain;
+        }
+        
+        &:not(:last-of-type) {
+            margin-right: 42px;
+        }
+
+        &-title {
+            font-size: 36px;
+            font-weight: 600;
+            margin: 0 0 8px;
+        }
+
+        &-description {
+            font-size: 20px;
+            line-height: 1.4;
+            max-width: 80%;
+            margin: 0 0 40px;
+        }
+    }
+}

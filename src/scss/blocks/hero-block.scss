@@ -1,0 +1,127 @@
+.hero-block {
+    background-color: #14141B;
+    background-image: image-set(
+        url('../../images/hero-image.jpg') 1x,
+        url('../../images/hero-image@2x.jpg') 2x
+    );
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;   
+    overflow-x: hidden;
+    margin-bottom: 196px;
+
+    &__container {
+        padding: 150px 0 0;
+    }
+
+    &__content {
+        max-width: 666px;
+        margin-bottom: 148px;
+    }  
+
+    &__caption-title {
+        font-size: 24px;
+        font-weight: 500;
+        color: white;
+        margin: 0 0 32px;
+    }
+
+    &__cta {
+        display: flex;
+        align-items: center;
+
+        a:first-of-type {
+            margin-right: 14px;
+        }
+    }
+
+    &__logos {        
+        border-top: rgba(169, 180, 255, 0.15) 1px solid;
+        border-bottom: rgba(169, 180, 255, 0.15) 1px solid;
+
+        &-wrap {
+            display: flex;
+            align-items: center;
+            height: 120px;
+
+            img {
+                mix-blend-mode: lighten;
+                transition: all .2s;
+
+                &:hover {
+                    filter: brightness(3);
+                }
+            }
+
+            a {
+                &:not(:last-of-type) {
+                    margin-right: 58px;
+                }
+            }
+        }
+    }
+
+    &__our-mission {
+
+        &-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 174px 0 265px;
+        }
+
+        &-text {
+            width: 666px;
+        }
+
+        &-video {
+            display: flex;
+            align-items: center;
+        }
+
+        &-video-title {
+            border-radius: 8px;
+            background: linear-gradient(90deg, rgba(20, 20, 26, 0.01) 3.15%, #000000 100%);
+            padding: 16px;
+            margin-right: 74px;
+
+            h3 {
+                font-size: 18px;
+                font-weight: 500;
+                color: white;
+                margin: 0 0 2px;
+            }
+            
+            p {
+                font-size: 14px;
+                font-weight: 300;
+                color: white;
+                margin: 0;
+            }
+        }
+    }
+
+    &__video-button {        
+        width: 178px;
+        height: 178px;
+        background-color: transparent;
+        background-image: image-set(
+            url('../../images/play-icon.png') 1x,
+            url('../../images/play-icon@2x.png') 2x
+        );
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: none;
+        cursor: pointer;
+        margin-right: 40px;
+    }
+
+    &__bottom-img {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 137px;
+        min-width: 1920px;
+    }
+}
