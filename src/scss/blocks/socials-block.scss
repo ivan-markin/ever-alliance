@@ -18,17 +18,17 @@
         @media (max-width: 768px) {
             width: 24px;
             height: 24px;
+
+            img {
+                transform: scale(.7);
+            }
         }
 
         &:not(:last-of-type) {
             margin-right: 16px;
 
             @media (max-width: 768px) {
-                margin-right: 12px;
-
-                img {
-                    transform: scale(.7);
-                }
+                margin-right: 12px;                
             }
         }
 

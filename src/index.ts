@@ -9,6 +9,10 @@ import Swiper from 'swiper';
 import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper/core';
 
 document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.querySelector('.header__menu-button');
+    const menuClose = document.querySelector('.mobile-menu__close');
+    const mobileMenuEl = document.querySelector('.mobile-menu');
+    
     SwiperCore.use([Navigation, Pagination, Autoplay]);
     const swiper = new Swiper('.swiper', {
         freeMode: true,
@@ -20,4 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
             type: 'bullets'            
         },
     })    
+
+    function mobileMenuHandler() {
+        mobileMenuEl?.classList.toggle('active');
+        document.body.classList.toggle('fixed');
+    }
+
+    menuButton?.addEventListener('click', mobileMenuHandler);
+    menuClose?.addEventListener('click', mobileMenuHandler);
 });
