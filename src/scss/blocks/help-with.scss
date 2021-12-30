@@ -1,6 +1,10 @@
 .help-with {
     position: relative;
     padding-bottom: 270px;
+
+    @media (max-width: 768px) {
+        padding-bottom: 60px;
+    }
     
     &__container {
         display: flex;
@@ -10,6 +14,20 @@
 
     &__title {
         text-align: center;
+
+        @media (max-width: 768px) {
+            margin: 0 0 30px;
+        }
+    }
+
+    &__subtitle {
+        @media (max-width: 1024px) {
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 
     &__top {
@@ -20,6 +38,19 @@
         font-size: 24px;
         font-weight: 500;
         margin-bottom: 40px;
+
+        @media (max-width: 1312px) {
+            flex-direction: column;
+        }
+
+        @media (max-width: 1094px) {
+            font-size: 2.19vw;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 10px;
+            margin-bottom: 30px;
+        }
     }
 
     &__links {
@@ -34,27 +65,61 @@
         opacity: .5;
         transition: all .2s;
         cursor: pointer;
+        position: relative;
+        padding-left: 52px;   
+        
+        @media (max-width: 1024px) {                 
+            padding-left: 14px;         
+        }
+
+        @media (max-width: 768px) {                 
+            padding-left: 5px;         
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            position: absolute;
+            left: 0;
+            top: calc(50% - 1px);
+            background-color: var(--color-black);
+
+            @media (max-width: 1024px) {            
+                width: 2px;
+                height: 2px;            
+            }
+        }
 
         &:not(:last-of-type) {
             margin-right: 12px;
-        }
 
-        svg {
-            margin-right: 12px;
-
-            rect {
-                fill: var(--color-black);
+            @media (max-width: 768px) {                 
+                margin-right: 4px;         
             }
-        }
+        }        
 
         &.active,
         &:hover {
             color: var(--color-violet);
-            opacity: 1;
+            opacity: 1; 
+            
+            &::before {
+                background-color: var(--color-violet);
+            }                      
+        }
+    }
 
-            svg rect {
-                fill: var(--color-violet);
-            }
+    .section-divider {
+        
+        @media (max-width: 1024px) {
+            height: 60px;
+            min-width: auto;
+        }
+
+        @media (max-width: 768px) {
+            bottom: -60px;
         }
     }
 }

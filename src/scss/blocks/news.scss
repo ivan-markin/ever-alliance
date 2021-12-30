@@ -1,17 +1,45 @@
 .news {
     margin-bottom: 180px;
+
+    @media (max-width: 768px) {
+        margin-bottom: 46px;
+    }
     
     &__top {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: fit-content;
         margin-bottom: 30px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 12px;
+        }
+
+        .btn {
+            @media (max-width: 768px) {
+                font-size: 10px;
+                height: fit-content;
+            }                    
+
+            svg {
+                @media (max-width: 768px) {
+                    width: 10px;
+                    height: 10px;
+                    margin-right: 5px;
+                }                 
+            }
+        }
     }
 
     &__title {
         font-size: 36px;
-        font-weight: 500;
+        font-weight: 500;        
         margin: 0;
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
     }
     
     &__grid {

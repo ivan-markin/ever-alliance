@@ -1,8 +1,16 @@
 .double-blocks {
     margin-bottom: 180px;
 
+    @media (max-width: 768px) {
+        margin-bottom: 56px;
+    }
+
     &__container {
         display: flex;
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
     }
 
     &__item {
@@ -11,6 +19,10 @@
         background-repeat: no-repeat;        
         background-position: right top; 
         padding: 60px;
+
+        @media (max-width: 768px) {
+            padding: 16px;
+        }
 
         &_1 {
             background-image: image-set(
@@ -30,12 +42,24 @@
         
         &:not(:last-of-type) {
             margin-right: 42px;
+
+            @media (max-width: 1024px) {
+                margin: 0 0 42px 0;
+            }
+
+            @media (max-width: 768px) {
+                margin: 0 0 20px 0;
+            }
         }
 
         &-title {
             font-size: 36px;
             font-weight: 600;
             margin: 0 0 8px;
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
         }
 
         &-description {
@@ -43,6 +67,29 @@
             line-height: 1.4;
             max-width: 80%;
             margin: 0 0 40px;
+
+            @media (max-width: 768px) {
+                font-size: 10px;
+                margin: 0 0 16px;
+            }
+        }
+
+        .btn {
+            @media (max-width: 768px) {               
+                justify-content: center;
+                height: 30px;
+                width: 45%;
+                border-radius: 4px;
+                font-size: 12px;
+                padding: 0 10px;                
+            }
+
+            svg {
+                @media (max-width: 768px) {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
         }
     }
 }

@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
         freeMode: true,
         spaceBetween: 25,
         slidesPerView: 'auto',
-        centeredSlides: true,
+        // centeredSlides: true,
         pagination: {
             el: '.swiper-pagination',
-            type: 'bullets'
+            type: 'bullets'            
         },
     })    
 });

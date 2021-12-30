@@ -47,12 +47,7 @@ body {
 
 .container {
   min-width: 320px;
-  overflow-x: hidden;
-  padding: 0 0 50px;
-
-  @media (max-width: 768px) {
-    padding: 0 0 50px;
-  }
+  overflow-x: hidden; 
 }
 
 .wrap {

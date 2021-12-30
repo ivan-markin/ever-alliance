@@ -1,5 +1,9 @@
 .socials-block {
     display: flex;
+
+    @media (max-width: 768px) {
+        align-items: center;
+    }
     
     &__item {
         display: flex;
@@ -11,8 +15,21 @@
         border-radius: 8px;
         transition: all .2s;
 
+        @media (max-width: 768px) {
+            width: 24px;
+            height: 24px;
+        }
+
         &:not(:last-of-type) {
             margin-right: 16px;
+
+            @media (max-width: 768px) {
+                margin-right: 12px;
+
+                img {
+                    transform: scale(.7);
+                }
+            }
         }
 
         &_youtube:hover {

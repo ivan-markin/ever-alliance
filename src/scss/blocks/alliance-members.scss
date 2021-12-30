@@ -1,14 +1,29 @@
 .alliance-members {
     padding-top: 150px;
     margin-bottom: 180px;
+
+    @media (max-width: 768px) {
+        margin-bottom: 120px;
+    }
     
     &__top {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
 
         h2 {
             font-size: 36px;
             font-weight: 500;
+
+            @media (max-width: 768px) {
+                text-align: center;
+                font-size: 12px;
+            }
         }
     }
     
@@ -44,5 +59,51 @@
         text-decoration: none;
         border-radius: 8px;
         padding: 0 12px;        
+    }
+
+    &__slider {
+        position: relative;        
+    }
+
+    &__join {
+        
+        &-top {
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &-bottom {
+            display: none;
+            margin: 78px auto 0 auto;
+            
+            @media (max-width: 768px) {
+                display: flex;
+            }
+        }
+    }
+
+    &__swiper-pagination {
+        bottom: -48px !important;
+
+        @media (max-width: 768px) {
+            bottom: -32px !important;
+        }
+
+        .swiper-pagination-bullet {
+            width: 6px;
+            height: 6px;
+            background: #E7E7E7;
+
+            &:not(:last-of-type) {
+                margin-right: 12px;
+            }
+        }
+        
+        .swiper-pagination-bullet-active {
+            width: 8px;
+            height: 8px;
+            background: #A0A3BE;
+        }
     }
 }
