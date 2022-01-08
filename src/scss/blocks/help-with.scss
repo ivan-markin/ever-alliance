@@ -13,7 +13,12 @@
     }
 
     &__title {
+        display: none;
         text-align: center;
+
+        &.active {
+            display: block;
+        }
 
         @media (max-width: 768px) {
             margin: 0 0 30px;

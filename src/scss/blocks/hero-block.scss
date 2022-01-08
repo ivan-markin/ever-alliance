@@ -186,6 +186,8 @@
         background-size: contain;
         border: none;
         cursor: pointer;
+        position: relative;
+        left: -13px;
         margin-right: 40px;
 
         @media (max-width: 768px) {

@@ -12,16 +12,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuButton = document.querySelector('.header__menu-button');
     const menuClose = document.querySelector('.mobile-menu__close');
     const mobileMenuEl = document.querySelector('.mobile-menu');
+    const tabs = document.querySelectorAll('.help-with__link');
+    const tabsCaptions = document.querySelectorAll('.help-with__title');
     
     SwiperCore.use([Navigation, Pagination, Autoplay]);
     const swiper = new Swiper('.swiper', {
         freeMode: true,
         spaceBetween: 25,
-        slidesPerView: 'auto',
-        // centeredSlides: true,
+        slidesPerView: 'auto',        
         pagination: {
             el: '.swiper-pagination',
-            type: 'bullets'            
+            type: 'bullets',
+            clickable: true            
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
     })    
 
@@ -30,6 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.toggle('fixed');
     }
 
+    function tabHandler(event) {
+        tabs.forEach(tab => tab.classList.remove('active'));        
+        event.target.classList.add('active');
+        tabsCaptions.forEach(caption => {            
+            caption.classList.remove('active');
+            caption.id == `${event.target.id}Content` && caption.classList.add('active');
+        });
+    }
+
+    tabs?.forEach(tab => {
+        tab.addEventListener('click', tabHandler);
+    })
     menuButton?.addEventListener('click', mobileMenuHandler);
     menuClose?.addEventListener('click', mobileMenuHandler);
 });
