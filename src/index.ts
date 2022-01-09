@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuEl = document.querySelector('.mobile-menu');
     const tabs = document.querySelectorAll('.help-with__link');
     const tabsCaptions = document.querySelectorAll('.help-with__title');
+    const formButtons = document.querySelectorAll('.form-button');
+    const formPopup = document.querySelector('.join-form');
+    const closeFormBtn = document.querySelector('.join-form__close');
     
     SwiperCore.use([Navigation, Pagination, Autoplay]);
     const swiper = new Swiper('.swiper', {
@@ -31,6 +34,22 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     })    
 
+    function openForm() {
+        formPopup?.classList.add('active');
+        document.body.style.position = 'fixed';
+        document.addEventListener('click', closeFormHelper);
+    }
+
+    function closeForm() {
+        formPopup?.classList.remove('active');
+        document.body.style.position = 'static';
+        document.removeEventListener('click', closeFormHelper);
+    }
+
+    function closeFormHelper(event) {
+        event.target.classList.contains('join-form') && closeForm();
+    }
+    
     function mobileMenuHandler() {
         mobileMenuEl?.classList.toggle('active');
         document.body.classList.toggle('fixed');
@@ -43,11 +62,15 @@ document.addEventListener('DOMContentLoaded', () => {
             caption.classList.remove('active');
             caption.id == `${event.target.id}Content` && caption.classList.add('active');
         });
-    }
+    }   
 
     tabs?.forEach(tab => {
         tab.addEventListener('click', tabHandler);
-    })
+    });
+    formButtons?.forEach(button => {
+        button.addEventListener('click', openForm);
+    });
+    closeFormBtn?.addEventListener('click', closeForm);
     menuButton?.addEventListener('click', mobileMenuHandler);
-    menuClose?.addEventListener('click', mobileMenuHandler);
+    menuClose?.addEventListener('click', mobileMenuHandler);    
 });

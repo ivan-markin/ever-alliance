@@ -13,6 +13,9 @@
 </head>
 
 <body>
+  
+  <!-- Mobile menu pop-up -->
+  
   <div class="mobile-menu">
     <div class="mobile-menu__header">
       <div class="wrap">
@@ -27,18 +30,18 @@
     <nav class="mobile-menu__menu">
       <ul>
         <li>
-          <a href="">Apply for Crystal Handshake</a>
+          <a class="form-button">Apply for Crystal Handshake</a>
         </li>
-        <li>
+        <!-- <li>
           <a href="">Blog</a>
-        </li>
+        </li> -->
         <li>
-          <a href="https://tonalliance.tilda.ws/">Apply for Grant</a>
+          <a href="https://tonalliance.tilda.ws/" target="_blank">Apply for Grant</a>
         </li>
       </ul>
     </nav>
     <div class="mobile-menu__cta">
-      <a class="btn btn_primary btn_middle" href="">Join us</a>
+      <a class="btn btn_primary btn_middle form-button">Join us</a>
       <!-- <a class="btn btn_secondary btn_middle" href="">Join Us</a> -->
     </div>
     <div class="mobile-menu__social">
@@ -72,9 +75,29 @@
     </div>
   </div>
 
-  <!-- <div class="join-form">
-    <iframe src="./join-form.html" frameborder="0"></iframe>
-  </div> -->
+  <!-- Video pop-up -->
+
+  <div class="video-popup">
+    <button class="video-popup__close btn_close">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.15076 30.8491L30.8492 1.15064" stroke="white" stroke-width="2" stroke-linecap="round" />
+        <path d="M30.8492 30.8491L1.15076 1.15064" stroke="white" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+    <div id="player"></div>
+  </div>
+
+  <!-- Join form -->
+  
+  <div class="join-form">    
+    <button class="join-form__close btn_close">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.15076 30.8491L30.8492 1.15064" stroke="white" stroke-width="2" stroke-linecap="round" />
+        <path d="M30.8492 30.8491L1.15076 1.15064" stroke="white" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+    <div id="wrapper" data-tf-widget="fXEKBhnt" data-tf-inline-on-mobile></div>
+  </div>
   
   <div class="container" data-scroll-container>        
 
@@ -87,14 +110,14 @@
           <div class="header__right">
             <nav class="header__menu">
               <ul>
-                <li><a href="">Apply for Crystal Handshake</a></li>
+                <li><a class="form-button">Apply for Crystal Handshake</a></li>
                 <!-- <li><a href="">Blog</a></li> -->
-                <li><a href="https://tonalliance.tilda.ws/">Apply for Grant</a></li>
+                <li><a href="https://tonalliance.tilda.ws/" target="_blank">Apply for Grant</a></li>
               </ul>
             </nav>
             <div class="header__cta">
               <!-- <a class="btn btn_secondary btn_small" href="">Join us</a> -->
-              <a class="btn btn_primary btn_small" href="">Join us</a>
+              <a class="btn btn_primary btn_small form-button">Join us</a>
             </div>
           </div>
           <button class="header__menu-button"></button>
@@ -115,7 +138,7 @@
                 The alliance will help you attract liquidity and tell the users of the Everscale ecosystem about your project.
               </p>
               <div class="hero-block__cta">
-                <a class="btn btn_primary btn_big" href="">Join the Alliance’s backers</a>
+                <a class="btn btn_primary btn_big form-button">Join the Alliance’s backers</a>
                 <!-- <a class="btn btn_secondary btn_big" href="">Join the Alliance’s backers</a> -->
               </div>
             </div>
@@ -155,7 +178,12 @@
                     <h3>How it works</h3>
                     <p>Watch video — 90 seconds</p>
                   </div>
-                  <a class="hero-block__video-button" href="https://www.youtube.com/watch?v=X7IwqN2YQTA" target="_blank"></a>
+                  <a class="hero-block__video-button">
+                    <svg width="48" height="60" viewBox="0 0 48 60" fill="#DEC9EA" fill-opacity="0.79" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M45.2411 34.9898C48.8035 32.6148 48.8034 27.3801 45.241 25.0052L10.141 1.60515C6.1537 -1.05307 0.812836 1.80528 0.812836 6.59745V53.3975C0.812836 58.1896 6.15371 61.048 10.141 58.3898L45.2411 34.9898Z"/>
+                    </svg>
+                  </a>
                 </div>              
                 <div class="hero-block__our-mission-text">
                   <h3 class="hero-block__caption-title">Our mission</h3>
@@ -442,7 +470,7 @@
               <p class="double-blocks__item-description">
                 Explore farming programs on tonswap.io and earn EVER every second.
               </p>
-              <a href="" class="btn btn_big btn_arrowed btn_arrowed_grey">
+              <a class="btn btn_big btn_arrowed btn_arrowed_grey form-button">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M13.5 20L21.5 12L13.5 4" stroke="#6347F5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                   <path d="M2.5 12H21.5" stroke="#6347F5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -455,7 +483,7 @@
               <p class="double-blocks__item-description">
                 Everscale DeFI Alliance has a special OTC program. Leave a request and learn more.
               </p>
-              <a href="" class="btn btn_big btn_arrowed btn_arrowed_grey">
+              <a class="btn btn_big btn_arrowed btn_arrowed_grey form-button">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M13.5 20L21.5 12L13.5 4" stroke="#6347F5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                   <path d="M2.5 12H21.5" stroke="#6347F5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -618,6 +646,50 @@
       </div>
     </footer>
   </div>
+
+  <script>    
+    const playButtonEl = document.querySelector('.hero-block__video-button');
+    const closePopupButtonEl = document.querySelector('.video-popup__close');
+    const videoPopupEl = document.querySelector('.video-popup');    
+        
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '720',
+        width: '1280',
+        videoId: 'X7IwqN2YQTA'        
+      });
+    }      
+    
+    function openVideoPopup() {      
+      videoPopupEl.classList.add('active');  
+      document.body.style.position = 'fixed';   
+      player.playVideo();       
+      document.addEventListener('click', closePopupHelper);
+    }
+
+    function closeVideoPopup() {      
+      videoPopupEl.classList.remove('active');
+      document.body.style.position = 'static';   
+      player.stopVideo(); 
+      document.removeEventListener('click', closePopupHelper);
+    }
+
+    function closePopupHelper(event) {
+      event.target.classList.contains('video-popup') && closeVideoPopup();
+    }    
+
+    playButtonEl.addEventListener('click', openVideoPopup);
+    closePopupButtonEl.addEventListener('click', closeVideoPopup);
+  </script>
+
+  <script src="http://embed.typeform.com/next/embed.js"></script>
 </body>
 
 </html>
